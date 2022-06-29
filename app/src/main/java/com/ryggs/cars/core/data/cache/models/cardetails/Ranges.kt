@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName
 
 data class Ranges(
     @SerializedName("maxDownPayment")
-    val maxDownPayment: Double,
+    val maxDownPayment: Double?,
     @SerializedName("maxInterestRate")
-    val maxInterestRate: Double,
+    val maxInterestRate: Double?,
     @SerializedName("minDownPayment")
-    val minDownPayment: Double,
+    val minDownPayment: Double?,
     @SerializedName("minInterestRate")
-    val minInterestRate: Double,
+    val minInterestRate: Double?,
     @SerializedName("tenure")
-    val tenure: Int
+    val tenure: Int?
 )

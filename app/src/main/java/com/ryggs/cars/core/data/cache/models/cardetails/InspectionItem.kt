@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName
 
 data class InspectionItem(
     @SerializedName("comment")
-    val comment: String,
+    val comment: String?,
     @SerializedName("condition")
-    val condition: String,
+    val condition: String?,
     @SerializedName("medias")
-    val medias: List<Media>,
+    val medias: List<Media>?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("response")
-    val response: String
+    val response: String?
 )

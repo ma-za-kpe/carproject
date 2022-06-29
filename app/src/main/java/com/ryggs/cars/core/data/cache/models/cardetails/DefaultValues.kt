@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class DefaultValues(
     @SerializedName("downPayment")
-    val downPayment: Double,
+    val downPayment: Double?,
     @SerializedName("interestRate")
-    val interestRate: Double,
+    val interestRate: Double?,
     @SerializedName("tenure")
-    val tenure: Int
+    val tenure: Int?
 )

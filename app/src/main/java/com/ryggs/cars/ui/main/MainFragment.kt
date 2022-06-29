@@ -9,6 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,7 @@ import com.ryggs.cars.allcarsfeature.presentation.AllCarsEvent
 import com.ryggs.cars.allcarsfeature.presentation.AllCarsViewModel
 import com.ryggs.cars.allcarsfeature.presentation.AllCarsViewState
 import com.ryggs.cars.allcarsfeature.presentation.CarsAdapter
+import com.ryggs.cars.cardetailfeature.presentation.CarDetailViewModel
 import com.ryggs.cars.core.presentation.Event
 import com.ryggs.cars.databinding.FragmentMainBinding
 import com.ryggs.cars.popularmakesfeature.presentation.AllCarCategoryEvent
@@ -26,6 +28,8 @@ import com.ryggs.cars.popularmakesfeature.presentation.AllCarCategoryViewModel
 import com.ryggs.cars.popularmakesfeature.presentation.AllCarCategoryViewState
 import com.ryggs.cars.popularmakesfeature.presentation.CarPopularCategoryAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -33,6 +37,7 @@ class MainFragment : Fragment() {
 
     private val allCarsViewModel : AllCarsViewModel by viewModels()
     private val allCarCategoryViewModel : AllCarCategoryViewModel by viewModels()
+    private val carDetailViewModel : CarDetailViewModel by viewModels()
 
     private val adapter by lazy { CarsAdapter { item ->
         showCarDetails(item as UIAllCars)

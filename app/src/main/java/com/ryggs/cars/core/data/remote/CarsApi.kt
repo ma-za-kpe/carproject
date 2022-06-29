@@ -5,6 +5,7 @@ import com.ryggs.cars.core.data.cache.models.cardetails.CarDetailResponse
 import com.ryggs.cars.core.data.cache.models.carmedia.CarMediaResponse
 import com.ryggs.cars.core.data.cache.models.popularmakes.PopularMakeResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface CarsApi {
@@ -16,12 +17,12 @@ interface CarsApi {
 
     // get car detail
     // https://api.staging.myautochek.com/v1/inventory/car/3sF5ITVTC
-    @GET("${ApiConstants.CAR_ENDPOINT}/{${ApiParameters.CAR_ID}}")
+    @GET("${ApiConstants.CAR_ENDPOINT}/{carId}")
     suspend fun getCarById(
-        @Query(ApiParameters.CAR_ID) id: String,
+        @Path("carId") carId: String,
     ): CarDetailResponse
 
-    // get popular makes
+    // get popular make
     // https://api.staging.myautochek.com/v1/inventory/make?popular=true
     @GET("${ApiConstants.MAKE_ENDPOINT}?${ApiParameters.POPULAR}=true")
     suspend fun getCarMake(): PopularMakeResponse

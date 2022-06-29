@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Media(
     @SerializedName("mediaType")
-    val mediaType: String,
+    val mediaType: String?,
     @SerializedName("url")
-    val url: String
+    val url: String?
 )

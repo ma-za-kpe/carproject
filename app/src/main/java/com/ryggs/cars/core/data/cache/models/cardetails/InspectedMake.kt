@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class InspectedMake(
     @SerializedName("count")
-    val count: Int,
+    val count: Int?,
     @SerializedName("imageUrl")
-    val imageUrl: String,
+    val imageUrl: String?,
     @SerializedName("name")
-    val name: String
+    val name: String?
 )

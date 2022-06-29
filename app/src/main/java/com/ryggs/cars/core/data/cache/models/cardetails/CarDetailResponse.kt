@@ -8,90 +8,90 @@ import com.google.gson.annotations.SerializedName
 @Entity(tableName = "details")
 data class CarDetailResponse(
     @SerializedName("bodyType")
-    val bodyType: BodyType,
+    val bodyType: BodyType?,
     @SerializedName("carFeatures")
-    val carFeatures: List<Any>,
+    val carFeatures: List<Any>?,
     @SerializedName("carName")
-    val carName: String,
+    val carName: String?,
     @SerializedName("ccMeasurement")
-    val ccMeasurement: String,
+    val ccMeasurement: String?,
     @SerializedName("city")
-    val city: String,
+    val city: String?,
     @SerializedName("country")
-    val country: String,
+    val country: String?,
     @SerializedName("createdAt")
-    val createdAt: String,
+    val createdAt: String?,
     @SerializedName("damageMedia")
-    val damageMedia: List<DamageMedia>,
+    val damageMedia: List<DamageMedia>?,
     @SerializedName("depositReceived")
-    val depositReceived: Boolean,
+    val depositReceived: Boolean?,
     @SerializedName("engineType")
-    val engineType: String,
+    val engineType: String?,
     @SerializedName("exteriorColor")
-    val exteriorColor: String,
+    val exteriorColor: String?,
     @SerializedName("features")
-    val features: List<Any>,
+    val features: List<Any>?,
     @SerializedName("financingSettings")
-    val financingSettings: FinancingSettings,
+    val financingSettings: FinancingSettings?,
     @SerializedName("fuelType")
-    val fuelType: String,
+    val fuelType: String?,
     @SerializedName("gradeScore")
-    val gradeScore: Double,
+    val gradeScore: Double?,
     @SerializedName("hasFinancing")
-    val hasFinancing: Boolean,
+    val hasFinancing: Boolean?,
     @SerializedName("hasThreeDImage")
-    val hasThreeDImage: Boolean,
+    val hasThreeDImage: Boolean?,
     @SerializedName("hasWarranty")
-    val hasWarranty: Boolean,
+    val hasWarranty: Boolean?,
     @PrimaryKey
     @SerializedName("id")
     val id: String,
     @SerializedName("imageUrl")
-    val imageUrl: String,
+    val imageUrl: String?,
     @SerializedName("inspectorDetails")
-    val inspectorDetails: InspectorDetails,
+    val inspectorDetails: InspectorDetails?,
     @SerializedName("installment")
-    val installment: Int,
+    val installment: Int?,
     @SerializedName("insured")
-    val insured: Boolean,
+    val insured: Boolean?,
     @SerializedName("interiorColor")
-    val interiorColor: String,
+    val interiorColor: String?,
     @SerializedName("isFeatured")
-    val isFeatured: Boolean,
+    val isFeatured: Boolean?,
     @SerializedName("loanValue")
-    val loanValue: Int,
+    val loanValue: Int?,
     @SerializedName("marketplaceOldPrice")
-    val marketplaceOldPrice: Int,
+    val marketplaceOldPrice: Int?,
     @SerializedName("marketplacePrice")
-    val marketplacePrice: Int,
+    val marketplacePrice: Int?,
     @SerializedName("marketplaceVisible")
-    val marketplaceVisible: Boolean,
+    val marketplaceVisible: Boolean?,
     @SerializedName("marketplaceVisibleDate")
-    val marketplaceVisibleDate: String,
+    val marketplaceVisibleDate: String?,
     @SerializedName("mileage")
-    val mileage: Int,
+    val mileage: Int?,
     @SerializedName("mileageUnit")
-    val mileageUnit: String,
+    val mileageUnit: String?,
     @SerializedName("model")
-    val model: Model,
+    val model: Model?,
     @SerializedName("modelFeatures")
-    val modelFeatures: List<Any>,
+    val modelFeatures: List<Any>?,
     @SerializedName("ownerType")
-    val ownerType: String,
+    val ownerType: String?,
     @SerializedName("sellingCondition")
-    val sellingCondition: String,
+    val sellingCondition: String?,
     @SerializedName("sold")
-    val sold: Boolean,
+    val sold: Boolean?,
     @SerializedName("state")
-    val state: String,
+    val state: String?,
     @SerializedName("transmission")
-    val transmission: String,
+    val transmission: String?,
     @SerializedName("updatedAt")
-    val updatedAt: String,
+    val updatedAt: String?,
     @SerializedName("vin")
-    val vin: String,
+    val vin: String?,
     @SerializedName("websiteUrl")
-    val websiteUrl: String,
+    val websiteUrl: String?,
     @SerializedName("year")
-    val year: Int
+    val year: Int?
 )

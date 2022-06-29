@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class DamageMedia(
     @SerializedName("comment")
-    val comment: String,
+    val comment: String?,
     @SerializedName("inspectionItems")
-    val inspectionItems: List<InspectionItem>,
+    val inspectionItems: List<InspectionItem>?,
     @SerializedName("name")
-    val name: String
+    val name: String?
 )

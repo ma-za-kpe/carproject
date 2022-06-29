@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class LoanCalculator(
     @SerializedName("defaultValues")
-    val defaultValues: DefaultValues,
+    val defaultValues: DefaultValues?,
     @SerializedName("loanPercentage")
-    val loanPercentage: Double,
+    val loanPercentage: Double?,
     @SerializedName("ranges")
-    val ranges: Ranges
+    val ranges: Ranges?
 )
