@@ -5,17 +5,17 @@ import com.google.gson.annotations.SerializedName
 
 data class Model(
     @SerializedName("id")
-    val id: Int,
+    val id: Int?,
     @SerializedName("imageUrl")
-    val imageUrl: String,
+    val imageUrl: String?,
     @SerializedName("make")
-    val make: Make,
+    val make: Make?,
     @SerializedName("modelFeatures")
-    val modelFeatures: List<Any>,
+    val modelFeatures: List<Any>?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("popular")
-    val popular: Boolean,
+    val popular: Boolean?,
     @SerializedName("wheelType")
-    val wheelType: String
+    val wheelType: String?
 )

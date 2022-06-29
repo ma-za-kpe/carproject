@@ -14,7 +14,7 @@ class CarConvertor {
     var gson = Gson()
 
     @TypeConverter
-    fun resultToString(intList: List<Result>): String{
+    fun resultToString(intList: List<Result>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -24,7 +24,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun statsToString(intList: Stats): String{
+    fun statsToString(intList: Stats?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -34,7 +34,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun carDetailToString(intList: List<CarDetailResponse>): String{
+    fun carDetailToString(intList: List<CarDetailResponse>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -44,7 +44,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun iIToString(intList: List<InspectionItem>): String{
+    fun iIToString(intList: List<InspectionItem>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -54,7 +54,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun lcToString(intList: LoanCalculator): String{
+    fun lcToString(intList: LoanCalculator?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -64,7 +64,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun dfToString(intList: DefaultValues): String{
+    fun dfToString(intList: DefaultValues?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -74,7 +74,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun rangesToString(intList: Ranges): String{
+    fun rangesToString(intList: Ranges?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -84,7 +84,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun iMToString(intList: List<InspectedMake>): String{
+    fun iMToString(intList: List<InspectedMake>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -94,7 +94,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun bodyTypeToString(intList: BodyType): String{
+    fun bodyTypeToString(intList: BodyType?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -104,7 +104,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun dmToString(intList: List<DamageMedia>): String{
+    fun dmToString(intList: List<DamageMedia>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -114,17 +114,17 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun fsToString(intList: FinancingSettings): String{
-        return gson.toJson(intList)
+    fun fsToString(fs: FinancingSettings?): String{
+        return gson.toJson(fs)
     }
     @TypeConverter
-    fun stringTofs(data: String): FinancingSettings{
+    fun stringToFs(data: String): FinancingSettings{
         val listType = object: TypeToken<FinancingSettings>(){}.type
         return gson.fromJson(data, listType)
     }
 
     @TypeConverter
-    fun idToString(intList: InspectorDetails): String{
+    fun idToString(intList: InspectorDetails?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -134,7 +134,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun mToString(intList: Model): String{
+    fun mToString(intList: Model?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -145,7 +145,7 @@ class CarConvertor {
 
     // TODO: find better way to handle this. saving empty field in the db...
     @TypeConverter
-    fun anyToString(intList: List<Any>): String{
+    fun anyToString(intList: List<Any>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -155,7 +155,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun carMediaToString(intList: List<CarMedia>): String{
+    fun carMediaToString(intList: List<CarMedia>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter
@@ -165,7 +165,7 @@ class CarConvertor {
     }
 
     @TypeConverter
-    fun makeToString(intList: List<Make>): String{
+    fun makeToString(intList: List<Make>?): String{
         return gson.toJson(intList)
     }
     @TypeConverter

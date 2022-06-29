@@ -42,6 +42,7 @@ class CarDetailViewModel @Inject constructor(
         }
     }
 
+    // here we check if the are exists
     private fun loadNetworkCarDetail(id: String) {
         if (state.value!!.cars.name.isEmpty()) {
             Log.d("vm", "called carsFromNetwork ${state.value?.cars?.photo}")
